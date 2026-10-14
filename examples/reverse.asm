@@ -32,7 +32,7 @@ WRITE   ADD R6, R6, #-1  ; pop from stack (last block that was read comes out)
 DONE    HALT
 
 
-row_length .FILL #5 ;number of blocks
+row_length .FILL #0 ;number of blocks
 start_x .FILL #0
 stack_base .FILL x4000
 
