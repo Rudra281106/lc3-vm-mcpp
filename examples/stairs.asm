@@ -1,7 +1,7 @@
 .ORIG x3000
 
 
-LD R4, height ;loading height into r4, which is also used as a loop
+LD R4, HEIGHT ;loading height into r4, which is also used as a loop
 TRAP x29     ; Puts player's position (x,y,z) into registers (0,1,2)
 
 
@@ -34,7 +34,7 @@ LOOP            TRAP x2C ; place stone at position in register (0,1,2)
 HALT
 
 
-height  .FILL #10 ; label for stairway height
+HEIGHT  .FILL #10 ; label for stairway height
 .END
 
 
