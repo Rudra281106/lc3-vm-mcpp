@@ -6,11 +6,12 @@ TRAP x29     ; Puts player's position (x,y,z) into registers (0,1,2)
 
 
 ADD R0, R0, #1 ; increases player position.x by one
-ADD R1, R1, #1 ; increases player position.y by one
+TRAP x2D ; r1 = height of ground
+ADD R1, R1, #1 ; increases ground position.y by one
 AND R3, R3, #0 ; clears R3
 ADD R3, R3, #1 ; load R3 with one
 AND R6, R6, #0
-ADD R6, R6, #2 ; first column holds 2 blocks
+ADD R6, R6, #1 ; first column holds 2 blocks
 
 
 
@@ -33,7 +34,7 @@ LOOP            TRAP x2C ; place stone at position in register (0,1,2)
 HALT
 
 
-height  .FILL #4 ; label for stairway height
+height  .FILL #10 ; label for stairway height
 .END
 
 

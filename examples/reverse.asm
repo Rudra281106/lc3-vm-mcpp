@@ -33,7 +33,7 @@ DONE    HALT
 
 
 row_length .FILL #0 ;number of blocks
-start_x .FILL #0
+start_x .FILL #0 ; DO NOT CHANGE UNLESS YOU WANT TO CHANGE WHERE YOU START FROM
 stack_base .FILL x4000
 
 .END
